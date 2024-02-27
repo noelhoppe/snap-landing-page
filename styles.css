@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --clr-neutral: hsl(0, 0%, 98%);
+    --clr-neutral-medium-gray: hsl(0, 0%, 41%);
+    --clr-neutral-almost-black: hsl(0, 0%, 8%);
+
+    font-family: "Epilogue", sans-serif;
+}
+
+p {
+    font-size: 1.125rem; /* 18px */
+}
+
+body {
+    margin: unset;
+}
+
+header > a:first-child {
+    margin: auto 0;
+}
+
+a {
+    color: var(--clr-neutral-medium-gray);
+    text-decoration: unset;
+    display: inline-block;
+}
+
+header {
+    margin: 20px 40px;  /* px values? */
+    display: flex;
+}
+
+nav {
+    margin-left: 60px;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    padding: 20px;
+}
+
+#header-nav-right-section {
+    margin: 0 0 0 auto;
+}
+
+/* display dropdown menu svg icon */
+.link-dropdown::after {
+    display: inline-block;
+    margin: auto 10px;
+}
+
+.link-dropdown::after {
+    content: url("images/icon-arrow-down.svg");
+}
+
+.link-dropdown[data-toggle="open"]::after {
+    content: url("images/icon-arrow-up.svg");
+}
+
+#register {
+    border: 2px solid var(--clr-neutral-medium-gray);
+    border-radius: 1rem;
+}
+
+/* hover states */
+#register:hover,
+a:hover,
+#header-nav-right-section a:first-child:hover {
+    color: var(--clr-neutral-almost-black);
+    border-color: var(--clr-neutral-almost-black);
+}
+
+#feature-dropdown-items {
+    display: block;
+}
+
+#feature-dropdown[data-toggle="close"] #feature-dropdown-items {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
