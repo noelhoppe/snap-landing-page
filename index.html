@@ -1,37 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" type="text/javascript"></script>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" type="text/javascript"></script>
+
+    <!-- Verwendung FontAwesome -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/24c4ff4fd2.js"></script>
 </head>
 <body>
-  <header>
-    <a href="#" aria-label="snap - Home">
-      <img src="images/logo.svg" alt="snap's logo">
+<header>
+    <a aria-label="snap - Home" href="#">
+        <img alt="snap's logo" src="images/logo.svg">
     </a>
     <nav>
-      <a id="feature-dropdown" class="link-dropdown" data-toggle="close" href="#">Features</a>
-      <a class="link-dropdown" data-toggle="close" href="#">Company</a>
-      <a href="#">Careers</a>
-      <a href="#">About</a>
+        <!-- features dropdown -->
+        <div class="dropdown-container">
+            <button class="link-dropdown" data-toggle="close" href="#" id="feature-dropdown">Features</button>
+            <nav class="items-dropdown d-none" id="feature-dropdown-items">
+                <a href="#" class="to-do-list-link">Todo List</a>
+                <a href="#" class="calendar-link">Calendar</a>
+                <a href="#" class="reminders-link">Reminders</a>
+                <a href="#" class="planning-link">Planning</a>
+            </nav>
+        </div>
+        <!-- company dropdown -->
+        <div class="dropdown-container">
+            <button class="link-dropdown" data-toggle="close" id="company-dropdown">Company</button>
+            <nav class="items-dropdown d-none" id="company-dropdown-items">
+                <a href="#">History</a>
+                <a href="#">Our Team</a>
+                <a href="#">Blog</a>
+            </nav>
+        </div>
+        <a href="#">Careers</a>
+        <a href="#">About</a>
     </nav>
     <nav id="header-nav-right-section">
-      <a href="#">Login</a>
-      <a id="register" href="#">Register</a>
+        <a href="#">Login</a>
+        <a href="#" class="register">Register</a>
     </nav>
-    <nav id="feature-dropdown-items" class="items-dropdown">
-      <a href="#">Todo List</a>
-      <a href="#">Calendar</a>
-      <a href="#">Reminders</a>
-      <a href="#">Planning</a>
-    </nav>
-  </header>
+    <div id="sidebar">
+        <!-- Mobile only -->
+        <button id="hamburger-menu" data-toggle="opened">
+            <!-- Hamburger icon click to open -->
+            <i id="hamburger-icon-open" class="fa-solid fa-bars"></i>
+            <!-- Close click to close icon -->
+            <i id="close-icon" class="fa-solid fa-xmark"></i>
+        </button>
+        <nav id="mobile-nav" class="d-none">
+            <div class="dropdown-container">
+                <button id="feature-dropdown-mobile" class="link-dropdown" data-toggle="close">
+                    Features
+                </button>
+                <nav class="items-dropdown" id="feature-dropdown-items-mobile">
+                    <a href="#" class="to-do-list-link">Todo List</a>
+                    <a href="#" class="calendar-link">Calendar</a>
+                    <a href="#" class="reminders-link">Reminders</a>
+                    <a href="#" class="planning-link">Planning</a>
+                </nav>
+            </div>
+            <div class="dropdown-container">
+                <button id="company-dropdown-mobile" class="link-dropdown" data-toggle="close">
+                    Company
+                </button>
+                <nav class="items-dropdown d-none" id="company-dropdown-items-mobile">
+                    <a href="#">History</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Blog</a>
+                </nav>
+            </div>
+            <a href="#">Careers</a>
+            <a href="#">About</a>
+            <a class="w-100" href="#">Login</a>
+            <a class="w-100 register" href="#">Register</a>
+        </nav>
+    </div>
+    <div id="bg-darkener">
+        <!-- background darkener -->
+    </div>
+</header>
 </body>
 </html>
